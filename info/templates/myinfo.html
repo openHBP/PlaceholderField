@@ -1,8 +1,7 @@
+{% extends 'base.html' %}
 {% load cms_tags %}
 
-<h1>Title page info</h1>
-
-<p>{{object.short_text}}</p>
-
-<p>Below this render_placeholder template tags doesn't show anything</p>
-{% render_placeholder object.short_text "640" %}
+{% block content %}
+    <h1>Title page info</h1>
+    {% render_placeholder object.short_text "640" %}
+{% endblock content %}
